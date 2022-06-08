@@ -9,7 +9,7 @@ import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 export default class MobileTable extends Vue {
 
   @Prop()
-  private columns: any;
+  private columns: any; // 这里不能给初始值
   @Prop({ default: false })
   private fixed?: boolean = false;
   @Prop({ default: '100%' })
@@ -99,9 +99,7 @@ export default class MobileTable extends Vue {
   }
 
   public pushData(datas: []) {
-    for (const row of datas) {
-        this.currentData.push(row);
-    }
+    this.currentData.push(...datas);
   }
 
   public getSortParams() {

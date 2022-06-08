@@ -1,10 +1,8 @@
 <template>
  <div>
-  <div class="content"> 
           <mobile-table
           ref="mobileTable" 
           :columns="columns"
-          :fixed='true'
           :width="tableWidth"
           @sortHandle="loadData">
             <template  slot-scope="scope">
@@ -14,7 +12,6 @@
               </template>
             </template>
         </mobile-table>
-  </div>
  </div>
 </template>
 
