@@ -3,13 +3,13 @@ import { CreateElement } from 'vue';
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 /**
  * author xjx
- * 移动端table
+ * 移动端table https://github.com/xjx199403/vue_mobile_table
  */
 @Component
 export default class MobileTable extends Vue {
 
   @Prop()
-  private columns: any; // 这里不能给初始值
+  private columns: any;
   @Prop({ default: false })
   private fixed?: boolean = false;
   @Prop({ default: '100%' })
