@@ -5,8 +5,10 @@ vue3.0; typescript.
 ### 开发语言：
 普通的vue3.0脚手架环境即可.
 ### 图示：
-你只需要引入组件：
-
+1.你只需要引入组件：
+2.配置 表头.json:
+3.存入数据:
+https://github.com/xjx199403/vue_mobile_table/blob/main/%E5%AD%98%E5%85%A5%E6%95%B0%E6%8D%AE.png
 
 #### 前端： 
 
