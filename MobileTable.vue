@@ -9,7 +9,7 @@ import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 export default class MobileTable extends Vue {
 
   @Prop()
-  private columns: any; // 这里不能给初始值
+  private columns: any;
   @Prop({ default: false })
   private fixed?: boolean = false;
   @Prop({ default: '100%' })
