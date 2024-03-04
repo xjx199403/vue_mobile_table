@@ -1,4 +1,4 @@
-# 双重递归实现的移动端vue动态表格组件
+# 功能强大的移动端vue动态表格组件
 ### 开发语言：
 vue3.0; typescript.
 ### 依赖：
@@ -15,9 +15,9 @@ vue3.0; typescript.
 ![image](https://github.com/xjx199403/vue_mobile_table/blob/main/%E7%BB%93%E6%9E%9C1.png?raw=true)  
 ### 内容：
 组件: MobileTable.vue, mergeCellV2.jsx  
-demo: MobileTableDemo.vue
+示例: MobileTableDemo.vue
 ### 说明：
-* 组件参考ant-design-vue的表格的生成模式;
+* 核心算法是递归内嵌递归，组件参考ant-design-vue的表格的生成模式，与其使用方法基本一致;
 * 适用于移动端，在有大量表格的OA应用中(微信公众号,企业微信,app)使用非常方便，可以节省很多开发时间;
 * demo中的数据来源可替换成后台传入，重新pushData即可，同样排序参数也可以传到后台去排序;
 * 表头可以动态改变，表头中的配置见名知意，有需要也可以在组件中直接添加;
