@@ -4,9 +4,9 @@ vue3.0; typescript.
 ### 依赖：
 普通的vue3.0脚手架环境即可.
 ### 使用方法：
-1.你只需要引入组件: 
-添加MobileTable.vue,mergeCellV2.jsx，并引入:
-![image](https://github.com/xjx199403/vue_mobile_table/blob/main/01.png?raw=true)  
+1.你只需引入组件: 
+![image](https://github.com/xjx199403/vue_mobile_table/blob/main/01.png?raw=true) 
+在项目中添加MobileTable.vue,mergeCellV2.jsx，并引用:
 ![image](https://github.com/xjx199403/vue_mobile_table/blob/main/02.png?raw=true)  
 ![image](https://github.com/xjx199403/vue_mobile_table/blob/main/%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6.png?raw=true)  
 2.配置 表头.json:  
