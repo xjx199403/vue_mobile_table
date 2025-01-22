@@ -23,8 +23,8 @@ export default class MobileTable extends Vue {
 
   private colgroups: any = [];
   private trsHead: any = [];
-  private loopCount: number = 0;
-  private floorCount: number = 0;
+  private loopCount: number = 0; // 总深度
+  private floorCount: number = 0; // 当前深度
   private loopCountMax: number = 0;
   private colspanCount: number = 0;
 
@@ -48,7 +48,7 @@ export default class MobileTable extends Vue {
               this.loopCount++;
               this.floorCount++;
               this.initColumns(cell.children);
-              this.floorCount--;
+              this.floorCount--; // 深度回溯
           } else {
               this.initCell(cell);
               if(this.loopCount >= this.loopCountMax) {
