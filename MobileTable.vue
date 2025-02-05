@@ -17,38 +17,38 @@ export default class MobileTable extends Vue {
   private currentData?: any = [];
   private currentColumns?: any = [];
 
-  private previousSortIndex: number = 0;
-  private sortCount: number = 0;
-  private sortParams: {} = {sortField: '', sortOrder: ''};
+  private previousSortIndex: number = 0; // 上次排序flag
+  private sortCount: number = 0; // 排序flag
+  private sortParams: {} = {sortField: '', sortOrder: ''}; // 排序入参
 
-  private colgroups: any = [];
-  private trsHead: any = [];
+  private colgroups: any = []; 
+  private trsHead: any = []; // 表头
   private loopCount: number = 0; // 总深度
   private floorCount: number = 0; // 当前深度
-  private loopCountMax: number = 0;
-  private colspanCount: number = 0;
+  private loopCountMax: number = 0; // 纵坐标最大长度
+  private colspanCount: number = 0; // 横坐标最大长度
 
-  private createSortElement = require('./mergeCellV2').createSortElement;
-  private merge = require('./mergeCellV2').merge;
+  private createSortElement = require('./mergeCellV2').createSortElement; // 排序组件
+  private merge = require('./mergeCellV2').merge; // 合并单元格组件
   
-  private created() {
+  private created() { // 初始化 监听 以及 合并单元格
     this.initColumnsWatcher();
     this.initColumnsMerge();
   }
   
   @Watch("columns")
-  public initColumnsWatcher() {
+  public initColumnsWatcher() { // 监听表头变化
       this.initColumns(this.columns);
   }
 
-  private initColumns(columns: any) {
+  private initColumns(columns: any) { // 表头初始化
       columns.forEach((cell: any) => {
           cell.floor = this.floorCount;
           if (cell.children) {
               this.loopCount++;
               this.floorCount++;
               this.initColumns(cell.children);
-              this.floorCount--; // 深度回溯
+              this.floorCount--; // 递归回溯
           } else {
               this.initCell(cell);
               if(this.loopCount >= this.loopCountMax) {
@@ -66,7 +66,7 @@ export default class MobileTable extends Vue {
     });
   }
 
-  private mergeColumns(cols: any) {
+  private mergeColumns(cols: any) { // 递归合并单元格
       if(cols.children) {
           cols.rowspan = 1;
           if(! cols.colspan) {
