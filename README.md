@@ -8,7 +8,6 @@ vue3.0; typescript.
 ### 使用方法：
 1.你只需引入该组件：MobileTable.vue,mergeCellV2.jsx: 
 ![image](https://raw.githubusercontent.com/xjx199403/vue_mobile_table/refs/heads/main/%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6.bmp)
-![image](https://github.com/xjx199403/vue_mobile_table/blob/main/02.png?raw=true) 
 并在项目中添加:
 ![image](https://github.com/xjx199403/vue_mobile_table/blob/main/01.png?raw=true)  
 ![image](https://github.com/xjx199403/vue_mobile_table/blob/main/%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6.png?raw=true)  
