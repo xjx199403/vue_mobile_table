@@ -59,18 +59,18 @@ export default class MobileTable extends Vue {
           }
       });
   }
-  
+	
   private initColumnsMerge() {
     this.columns.forEach((cols: any) => {
         this.mergeColumns(cols);
     });
   }
-
-  private mergeColumns(cols: any) { // 递归合并单元格
+	
+  private mergeColumns(cols: any) { // 递归合并单元
       if(cols.children) {
           cols.rowspan = 1;
           if(! cols.colspan) {
-              this.getColspanCount(cols);
+              this.getColspanCount(cols); // 递归嵌套
               cols.colspan = this.colspanCount;
               this.trsHead.push(cols);
               this.currentColumns.push(cols);
